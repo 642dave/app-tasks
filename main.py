@@ -35,6 +35,15 @@ def save_tasks():
             file.write(f"{one_task}\n")
 
 
+def open_tasks():
+    try:
+        with open("tasks_save.txt", "r") as file:
+            for one_line in file:
+                list_box.insert(END, one_line)
+    except:
+        print("Error, failed to open file! ")
+
+
 # Frames
 input_frame = Frame(window, bg=main_color)
 text_frame = Frame(window, bg=main_color)
@@ -75,6 +84,8 @@ remove_button.grid(row=0, column=0, padx=2, pady=10)
 clear_button.grid(row=0, column=1, padx=2, pady=10)
 save_button.grid(row=0, column=2, padx=2, pady=10, ipadx=8)
 quit_button.grid(row=0, column=3, padx=2, pady=10, ipadx=8)
+
+open_tasks()
 
 # Main loop
 window.mainloop()
