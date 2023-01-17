@@ -24,6 +24,10 @@ def remove_text_item():
     list_box.delete(ANCHOR)
 
 
+def clear_all_list():
+    list_box.delete(0, END)
+
+
 # Frames
 input_frame = Frame(window, bg=main_color)
 text_frame = Frame(window, bg=main_color)
@@ -55,7 +59,7 @@ text_scrollbar.config(command=list_box.yview)
 remove_button = Button(button_frame, text="Remove item",
                        borderwidth=2, font=main_font, command=remove_text_item)
 clear_button = Button(button_frame, text="Remove list",
-                      borderwidth=2, font=main_font)
+                      borderwidth=2, font=main_font, command=clear_all_list)
 save_button = Button(button_frame, text="Save",
                      borderwidth=2, font=main_font)
 quit_button = Button(button_frame, text="Quit",
