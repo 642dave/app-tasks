@@ -40,8 +40,8 @@ clear_button = Button(button_frame, text="Remove list",
                       borderwidth=2, font=main_font)
 save_button = Button(button_frame, text="Save",
                      borderwidth=2, font=main_font)
-quit_button = Button(button_frame, text="Close",
-                     borderwidth=2, font=main_font)
+quit_button = Button(button_frame, text="Quit",
+                     borderwidth=2, font=main_font, command=window.destroy)
 remove_button.grid(row=0, column=0)
 clear_button.grid(row=0, column=1)
 save_button.grid(row=0, column=2)
