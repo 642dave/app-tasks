@@ -28,6 +28,13 @@ def clear_all_list():
     list_box.delete(0, END)
 
 
+def save_tasks():
+    with open("tasks_save.txt", "w") as file:
+        my_tasks = list_box.get(0, END)
+        for one_task in my_tasks:
+            file.write(f"{one_task}\n")
+
+
 # Frames
 input_frame = Frame(window, bg=main_color)
 text_frame = Frame(window, bg=main_color)
@@ -61,7 +68,7 @@ remove_button = Button(button_frame, text="Remove item",
 clear_button = Button(button_frame, text="Remove list",
                       borderwidth=2, font=main_font, command=clear_all_list)
 save_button = Button(button_frame, text="Save",
-                     borderwidth=2, font=main_font)
+                     borderwidth=2, font=main_font, command=save_tasks)
 quit_button = Button(button_frame, text="Quit",
                      borderwidth=2, font=main_font, command=window.destroy)
 remove_button.grid(row=0, column=0, padx=2, pady=10)
