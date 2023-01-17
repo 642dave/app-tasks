@@ -32,7 +32,10 @@ def save_tasks():
     with open("tasks_save.txt", "w") as file:
         my_tasks = list_box.get(0, END)
         for one_task in my_tasks:
-            file.write(f"{one_task}\n")
+            if one_task.endswith("\n"):
+                file.write(f"{one_task}")
+            else:
+                file.write(f"{one_task}\n")
 
 
 def open_tasks():
