@@ -21,12 +21,17 @@ input_frame.pack()
 text_frame.pack()
 button_frame.pack()
 
-# Input frame content
+# Input frame - content
 user_input = Entry(input_frame, width=30, borderwidth=3, font=main_font)
 user_input.grid(row=0, column=0)
 add_button = Button(input_frame, text="Add", borderwidth=2,
-font=main_font, bg=button_color)
+                    font=main_font, bg=button_color)
 add_button.grid(row=0, column=1)
+
+# Text frame - content
+list_box = Listbox(text_frame, height=15, width=45,
+                   borderwidth=3, font=main_font)
+list_box.grid(row=0, column=0)
 
 # Main loop
 window.mainloop()
