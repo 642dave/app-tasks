@@ -22,11 +22,11 @@ text_frame.pack()
 button_frame.pack()
 
 # Input frame - content
-user_input = Entry(input_frame, width=30, borderwidth=3, font=main_font)
-user_input.grid(row=0, column=0)
+user_input = Entry(input_frame, width=35, borderwidth=3, font=main_font)
+user_input.grid(row=0, column=0, padx=5, pady=5)
 add_button = Button(input_frame, text="Add", borderwidth=2,
                     font=main_font, bg=button_color)
-add_button.grid(row=0, column=1)
+add_button.grid(row=0, column=1, padx=5, pady=5, ipadx=10)
 
 # Text frame - content
 list_box = Listbox(text_frame, height=15, width=45,
@@ -42,10 +42,10 @@ save_button = Button(button_frame, text="Save",
                      borderwidth=2, font=main_font)
 quit_button = Button(button_frame, text="Quit",
                      borderwidth=2, font=main_font, command=window.destroy)
-remove_button.grid(row=0, column=0)
-clear_button.grid(row=0, column=1)
-save_button.grid(row=0, column=2)
-quit_button.grid(row=0, column=3)
+remove_button.grid(row=0, column=0, padx=2, pady=10)
+clear_button.grid(row=0, column=1, padx=2, pady=10)
+save_button.grid(row=0, column=2, padx=2, pady=10, ipadx=8)
+quit_button.grid(row=0, column=3, padx=2, pady=10, ipadx=8)
 
 # Main loop
 window.mainloop()
