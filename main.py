@@ -33,5 +33,19 @@ list_box = Listbox(text_frame, height=15, width=45,
                    borderwidth=3, font=main_font)
 list_box.grid(row=0, column=0)
 
+# Button frame - content
+remove_button = Button(button_frame, text="Remove item",
+                       borderwidth=2, font=main_font)
+clear_button = Button(button_frame, text="Remove list",
+                      borderwidth=2, font=main_font)
+save_button = Button(button_frame, text="Save",
+                     borderwidth=2, font=main_font)
+quit_button = Button(button_frame, text="Close",
+                     borderwidth=2, font=main_font)
+remove_button.grid(row=0, column=0)
+clear_button.grid(row=0, column=1)
+save_button.grid(row=0, column=2)
+quit_button.grid(row=0, column=3)
+
 # Main loop
 window.mainloop()
