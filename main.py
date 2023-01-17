@@ -28,6 +28,10 @@ add_button = Button(input_frame, text="Add", borderwidth=2,
                     font=main_font, bg=button_color)
 add_button.grid(row=0, column=1, padx=5, pady=5, ipadx=10)
 
+# Scrollbar
+text_scrollbar = Scrollbar(text_frame)
+text_scrollbar.grid(row=0, column=1, sticky=N+S)
+
 # Text frame - content
 list_box = Listbox(text_frame, height=15, width=45,
                    borderwidth=3, font=main_font)
