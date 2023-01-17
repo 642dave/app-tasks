@@ -20,6 +20,10 @@ def add_text():
     user_input.delete(0, END)
 
 
+def remove_text_item():
+    list_box.delete(ANCHOR)
+
+
 # Frames
 input_frame = Frame(window, bg=main_color)
 text_frame = Frame(window, bg=main_color)
@@ -49,7 +53,7 @@ text_scrollbar.config(command=list_box.yview)
 
 # Button frame - content
 remove_button = Button(button_frame, text="Remove item",
-                       borderwidth=2, font=main_font)
+                       borderwidth=2, font=main_font, command=remove_text_item)
 clear_button = Button(button_frame, text="Remove list",
                       borderwidth=2, font=main_font)
 save_button = Button(button_frame, text="Save",
